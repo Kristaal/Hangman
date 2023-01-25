@@ -158,5 +158,20 @@ def game(word, lives_qv):
         print(" ".join(blanks).center(76))
         print('\n')
     
-    restart_game(guessed, word)
-    
+    restart(guessed, word)
+
+def restart(guessed, word):
+    """
+    function display results when user guessed the word or lost his lives
+    """
+    if guessed:
+        clear_terminal()
+        print('You guessed the word'.center(80))
+        print('\n')
+        again()
+    else:
+        clear_terminal()
+        print(' ' * 20 + 'You run out of lives. the word was: ' + word)
+        print('\n')
+        again()
+
