@@ -7,9 +7,9 @@ import words
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 
-MOVIES_LEVEL = words.movies_words
-CARS_LEVEL = words.cars_words
-ANIMALS_LEVEL = words.animals_words
+MOVIES_THEME = words.movies_words
+CARS_THEME = words.cars_words
+ANIMALS_THEME = words.animals_words
  
 def clear_terminal():
     """
@@ -72,21 +72,34 @@ def set_theme():
     function to set the theme of the word
     """
     print('\n')
-    print('Please select M for movies theme,'.center(80))
-    print('C for cars theme and A for animals theme'.center(80))
+    print('Please select M for movies theme (7 lives),'.center(80))
+    print('C for cars theme (6 lives)and A for animals theme(5 lives)'.center(80))
     theme = False
     while not theme:
         theme_level = input(' '.center(40)).upper()
         if theme_level == 'M':
             theme = True
-            lives = 6
+            lives = 7
         elif theme_level == 'C':
             theme = True
             lives = 6
         elif theme_level == 'A':
             theme = True
-            lives = 6
+            lives = 5
         else:
             print('Please select M, C or A'.center(80))
     return lives
+
+def random_word(lives):
+    """
+    function to set the random word depending on user theme 
+    """
+    if lives == 7:
+        get_words = random.choice(MOVIES_THEME).upper()
+    elif lives == 6:
+        get_words = random.choice(CARS_THEME).upper()
+    elif lives == 5:
+        get_words = random.choice(ANIMALS_THEME).upper()
+    return get_words
+
     
