@@ -5,13 +5,11 @@ import random
 import os
 import words
 from hangman import hangman_lives
-from colorama import Fore, Back, Style
-colorama.init(autoreset=True)
 
 MOVIES_THEME = words.movies_words
 CARS_THEME = words.cars_words
 ANIMALS_THEME = words.animals_words
- 
+
 def clear_terminal():
     """
     function to clean terminal
@@ -43,7 +41,7 @@ def welcome():
     while True:
         user_choice = input(' ' * 28 + 'Select 1 or 2: ')
         if user_choice == '1':
-            start_game()
+            start()
         elif user_choice == '2':
             rules()
         else:
@@ -73,7 +71,7 @@ def set_theme():
     function to set the theme of the word
     """
     print('\n')
-    print('Please select M for movies theme (7 lives),'.center(80))
+    print('Please select M for movies theme (7 lives), '.center(80))
     print('C for cars theme (6 lives)and A for animals theme(5 lives)'.center(80))
     theme = False
     while not theme:
