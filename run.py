@@ -189,4 +189,13 @@ def again():
         else:
             print('Please select Y or N'.center(80))
 
-            
+def start():
+    """
+    function to start the game
+    """
+    clear_terminal()
+    lives_qv = set_theme()
+    get_random = random_word(lives_qv)
+    game(get_random, lives_qv)
+    
+
