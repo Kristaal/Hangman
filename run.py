@@ -66,4 +66,27 @@ def rules():
         """)
     input(' ' * 12 + 'Press enter to return to the main menu\n')
     welcome()
+
+def set_theme():
+    """
+    function to set the theme of the word
+    """
+    print('\n')
+    print('Please select M for movies theme,'.center(80))
+    print('C for cars theme and A for animals theme'.center(80))
+    theme = False
+    while not theme:
+        theme_level = input(' '.center(40)).upper()
+        if theme_level == 'M':
+            theme = True
+            lives = 6
+        elif theme_level == 'C':
+            theme = True
+            lives = 6
+        elif theme_level == 'A':
+            theme = True
+            lives = 6
+        else:
+            print('Please select M, C or A'.center(80))
+    return lives
     
