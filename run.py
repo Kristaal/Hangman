@@ -11,3 +11,10 @@ MOVIES_LEVEL = words.movies_words
 CARS_LEVEL = words.cars_words
 ANIMALS_LEVEL = words.animals_words
  
+def clear_terminal():
+    """
+    function that clean terminal
+    """
+    os.system(('cls' if os.name == 'nt' else 'clear'))
+    title()
+    
