@@ -175,3 +175,18 @@ def restart(guessed, word):
         print('\n')
         again()
 
+def again():
+    """
+    function to start the game again or back to the main menu
+    """
+    while True:
+        user_input = input(' ' * 23 + 'Would you like to play again? Y/N ').upper() 
+        print('\n')
+        if user_input == 'Y':
+            start()
+        elif user_input == 'N':
+            welcome()
+        else:
+            print('Please select Y or N'.center(80))
+
+            
