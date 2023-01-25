@@ -49,3 +49,21 @@ def welcome():
             print('Please select 1 or 2'.center(77))
             print('\n')
 
+def rules():
+    """
+    function to display rules for users
+    """
+    clear_terminal()
+    print(
+        """
+        Hangman is a word guessing game.\n
+        The object of the game is to figure out the unknown word by guessing letters.\n
+        If the letter is in the unknown word it will display.\n
+        If the guessed letter is not in the unknown word you will lose a try.\n
+        You will have 6 tries to guess before you are hanged and lose the game!
+        You can choose the different theme of words, M for movies theme, C for cars theme, A for animals theme.\n
+        Good luck!
+        """)
+    input(' ' * 12 + 'Press enter to return to the main menu\n')
+    welcome()
+    
