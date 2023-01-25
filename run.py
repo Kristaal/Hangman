@@ -13,8 +13,20 @@ ANIMALS_LEVEL = words.animals_words
  
 def clear_terminal():
     """
-    function that clean terminal
+    function to clean terminal
     """
     os.system(('cls' if os.name == 'nt' else 'clear'))
     title()
+
+def title():
+    """
+    function to display the title
+    """
+    print(
+        """
+        ░▒█░▒█░█▀▀▄░▒█▄░▒█░▒█▀▀█░▒█▀▄▀█░█▀▀▄░▒█▄░▒█
+        ░▒█▀▀█▒█▄▄█░▒█▒█▒█░▒█░▄▄░▒█▒█▒█▒█▄▄█░▒█▒█▒█
+        ░▒█░▒█▒█░▒█░▒█░░▀█░▒█▄▄▀░▒█░░▒█▒█░▒█░▒█░░▀█
+        """
+    )
     
