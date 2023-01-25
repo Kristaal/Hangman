@@ -4,6 +4,7 @@ Project 3 for Code Istitute
 import random
 import os
 import words
+from hangman import hangman_lives
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 
@@ -40,10 +41,10 @@ def welcome():
     print(' 2 HOW TO PLAY '.center(80))
     print('\n' * 4)
     while True:
-        player_choice = input(' ' * 28 + 'Select 1 or 2: ')
-        if player_choice == '1':
+        user_choice = input(' ' * 28 + 'Select 1 or 2: ')
+        if user_choice == '1':
             start_game()
-        elif player_choice == '2':
+        elif user_choice == '2':
             rules()
         else:
             print('Please select 1 or 2'.center(77))
@@ -102,4 +103,60 @@ def random_word(lives):
         get_words = random.choice(ANIMALS_THEME).upper()
     return get_words
 
+def game(word, lives_qv):
+    """
+    function to set the theme of the game and start
+    """
+    clear_terminal()
+    blanks = '_' * len(word)
+    guessed = False
+    guessed_letters = []
+    guessed_word = []
+    print(hangman_lives(lives_qv))
+    print(" ".join(blanks).center(76))
+    print('\n')
+    while not guessed and lives_qv > 0:
+        print(f"Lives: {lives_qv}".center(76))
+        user_guess = input(' ' * 25 + 'Please guess a letter: ').upper()
+        if len(user_guess) == 1 and user_guess.isalpha():
+            if user_guess in guessed_letters:
+                clear_terminal()
+                print(' ' * 25 + 'You guessed the letter ' + user_guess)
+            elif user_guess not in word:
+                clear_terminal()
+                print(' ' * 25 + user_guess + ' is not in the word')
+                lives_qv -= 1
+                guessed_letters.append(user_guess)
+            else:
+                clear_terminal()
+                print(' ' * 25 + user_guess + ' is in the word')
+                guessed_letters.append(user_guess)
+                word_li = list(blanks)
+                indices = [i for (i, letter) in enumerate(word)
+                           if letter == user_guess]
+                for index in indices:
+                    word_li[index] = user_guess
+                blanks = ''.join(word_li)
+                if '_' not in blanks:
+                    guessed = True
+        elif len(user_guess) == len(word) and user_guess.isalpha():
+            if user_guess in guessed_word:
+                clear_terminal()
+                print(' ' * 25 + 'You guessed the word ' + user_guess)
+            elif user_guess != word:
+                clear_terminal()
+                print(' ' * 25 + user_guess + 'is not in the word')
+                lives_qv -= 1
+                guessed_word.append(user_guess)
+            else:
+                guessed = True
+                blanks = word
+        else:
+            clear_terminal()
+            print('Not valid'.center(80))
+        print(hangman_lives(lives_qv))
+        print(" ".join(blanks).center(76))
+        print('\n')
+    
+    restart_game(guessed, word)
     
