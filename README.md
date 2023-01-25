@@ -36,6 +36,11 @@ Users try to guess a random word, by guessing the letters of the missing word. E
 
 ## How to play
 
+Hangman is a classic guessing game. You can read more about it on Wikipedia.
+The length of the word is explicitly stated and is marked by underscores for each letter to be guessed.
+The player attempts to build a missing word by guessing one letter at a time.
+If the player puts an incorrect letter, he will lose a try. The user continues to guess until they run out of lives without guessing the word.
+
 ## Project Goals 
 
 ### User Goals
