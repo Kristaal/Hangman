@@ -197,5 +197,12 @@ def start():
     lives_qv = set_theme()
     get_random = random_word(lives_qv)
     game(get_random, lives_qv)
-    
+
+def main_menu():
+    """
+    function to display main menu
+    """
+    welcome()
+
+main_menu()
 
