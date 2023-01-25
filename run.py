@@ -29,4 +29,23 @@ def title():
         ░▒█░▒█▒█░▒█░▒█░░▀█░▒█▄▄▀░▒█░░▒█▒█░▒█░▒█░░▀█
         """
     )
-    
+
+def welcome():
+    """
+    function to display title with navigation to start the game or read rules
+    """
+    clear_terminal()
+    print('\n')
+    print(' 1 PLAY GAME '.center(80))
+    print(' 2 HOW TO PLAY '.center(80))
+    print('\n' * 4)
+    while True:
+        player_choice = input(' ' * 28 + 'Select 1 or 2: ')
+        if player_choice == '1':
+            start_game()
+        elif player_choice == '2':
+            rules()
+        else:
+            print('Please select 1 or 2'.center(77))
+            print('\n')
+
