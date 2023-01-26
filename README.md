@@ -3,7 +3,7 @@
 
 Hangman is a terminal based game, which runs in the Code Institute mock terminal Heroku.
 
-Users try to guess a random word, by guessing the letters of the missing word. Each uncorrect guess takes one life. The game is over if the user guesses all the missing litters of the word or if he loses all his lives. Instructions are provided in the game to teacch the user how to play.
+Users try to guess a random word, by guessing the letters of the missing word. Each uncorrect guess takes one life. The game is over if the user guesses all the missing litters of the word or if he loses all his lives. Instructions are provided in the game to teach the user how to play.
 
 ![Start screen]()
 
@@ -42,30 +42,37 @@ The player attempts to build a missing word by guessing one letter at a time.
 If the player puts an incorrect letter, he will lose a try. The user continues to guess until they run out of lives without guessing the word.
 
 ## Project Goals 
+Hangman is a terminal game that outputs the word guessing game
 
 ### User Goals
+You have the opportunity to play the classic game "Hangman" and guess the words
 
 ### Site Owner Goals
+Allowing users to play and guess words
 
 ## User Experience
 
 ### Target Audience
+- User, who wants to remember the classic game "Hangman"
+- User, who want to guess the word
 
 ### User Requirements and Expectations
+- Easy to play
+- Easy setup
+- Clear rules of the game
 
 ### User Stories
-
+1. As a user, I want to read the rules of the game
+2. As a user, I want to start the game
+3. As a user, I want to be able to choose different theme for words to guess
+4. As a user, I want to see my remaining lives
+5. As a user, I want to see which letters I guessed correctly. 
+6. As a user, I want to see which letter 
+ I guessed wrong
+7. As a user, I want to get the result
+8. As a user, I want to play again
 ### Site Owner Stories
-
-## Technical Design
-
-### Flowchart
-
-## Technologies Used
-
-### Languages
-
-### Frameworks & Tools
+9. As a site owner, I want the user to be able to play
 
 ## Features
 
