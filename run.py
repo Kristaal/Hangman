@@ -10,12 +10,14 @@ MOVIES_THEME = words.movies_words
 CARS_THEME = words.cars_words
 ANIMALS_THEME = words.animals_words
 
+
 def clear_terminal():
     """
     function to clean terminal
     """
     os.system(('cls' if os.name == 'nt' else 'clear'))
     title()
+
 
 def title():
     """
@@ -28,6 +30,7 @@ def title():
         ░▒█░▒█▒█░▒█░▒█░░▀█░▒█▄▄▀░▒█░░▒█▒█░▒█░▒█░░▀█
         """
     )
+
 
 def welcome():
     """
@@ -48,6 +51,7 @@ def welcome():
             print('Please select 1 or 2'.center(77))
             print('\n')
 
+
 def rules():
     """
     function to display rules for users
@@ -55,16 +59,17 @@ def rules():
     clear_terminal()
     print(
         """
-        Hangman is a word guessing game.\n
-        The object of the game is to figure out the unknown word by guessing letters.\n
-        If the letter is in the unknown word it will display.\n
-        If the guessed letter is not in the unknown word you will lose a try.\n
-        You will have 6 tries to guess before you are hanged and lose the game!
-        You can choose the different theme of words, M for movies theme, C for cars theme, A for animals theme.\n
-        Good luck!
+       Hangman is a word guessing game.\n
+       If the letter is in the unknown word it will display.\n
+       If the guessed letter is not in the unknown word you will lose a life.\n
+       You will have 6 tries to guess before you are hanged and lose the game!
+       You can choose the different theme of words, M for movies theme,
+       C for cars theme, A for animals theme.\n
+       Good luck!
         """)
     input(' ' * 12 + 'Press enter to return to the main menu\n')
     welcome()
+
 
 def set_theme():
     """
@@ -72,7 +77,8 @@ def set_theme():
     """
     print('\n')
     print('Please select M for movies theme (7 lives), '.center(80))
-    print('C for cars theme (6 lives)and A for animals theme(5 lives)'.center(80))
+    print('C for cars theme (6 lives), and '.center(80))
+    print(' A for animals theme (5 lives)'.center(80))
     theme = False
     while not theme:
         theme_level = input(' '.center(40)).upper()
@@ -89,9 +95,10 @@ def set_theme():
             print('Please select M, C or A'.center(80))
     return lives
 
+
 def random_word(lives):
     """
-    function to set the random word depending on user theme 
+    function to set the random word depending on user theme
     """
     if lives == 7:
         get_words = random.choice(MOVIES_THEME).upper()
@@ -100,6 +107,7 @@ def random_word(lives):
     elif lives == 5:
         get_words = random.choice(ANIMALS_THEME).upper()
     return get_words
+
 
 def game(word, lives_qv):
     """
@@ -155,8 +163,8 @@ def game(word, lives_qv):
         print(hangman_lives(lives_qv))
         print(" ".join(blanks).center(76))
         print('\n')
-    
     restart(guessed, word)
+
 
 def restart(guessed, word):
     """
@@ -173,12 +181,13 @@ def restart(guessed, word):
         print('\n')
         again()
 
+
 def again():
     """
     function to start the game again or back to the main menu
     """
     while True:
-        user_input = input(' ' * 23 + 'Would you like to play again? Y/N ').upper() 
+        user_input = input(' ' * 23 + 'Play again? Y/N').upper()
         print('\n')
         if user_input == 'Y':
             start()
@@ -186,6 +195,7 @@ def again():
             welcome()
         else:
             print('Please select Y or N'.center(80))
+
 
 def start():
     """
@@ -196,11 +206,12 @@ def start():
     get_random = random_word(lives_qv)
     game(get_random, lives_qv)
 
+
 def main_menu():
     """
     function to display main menu
     """
     welcome()
 
-main_menu()
 
+main_menu()

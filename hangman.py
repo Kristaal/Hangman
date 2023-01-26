@@ -1,6 +1,8 @@
 """
 img lives of hangman
 """
+
+
 def hangman_lives(lives):
     """
     Hangman lives
@@ -92,5 +94,7 @@ def hangman_lives(lives):
                                     """,
         """
                                     """,
-        ]
-    return stages[lives] 
+             ]
+
+
+return stages[lives]
