@@ -160,9 +160,19 @@ Allowing users to play and guess words
 ## Validation
 
 ### PEP8 validation
+PEP8 online was used to check the code for PEP8 requirements.
+All code passes with no errors and warnings to show
 
-<details><summary>.py</summary>
-<img src="">
+<details><summary>run.py</summary>
+<img src="docs/validation/pep8_validation_run.png">
+</details>
+
+<details><summary>words.py</summary>
+<img src="docs/validation/pep8_validation_words.png">
+</details>
+
+<details><summary>hangman.py</summary>
+<img src="docs/validation/pep8_validation_hangman.png">
 </details>
 
 ### Testing user stories
