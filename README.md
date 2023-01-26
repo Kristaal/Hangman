@@ -74,6 +74,23 @@ Allowing users to play and guess words
 ### Site Owner Stories
 9. As a site owner, I want the user to be able to play
 
+## Technical Design
+
+### Flowchart
+<details><summary>Flowchart</summary>
+<img src="docs/flowchart.png">
+</details>
+
+## Technologies Used
+
+### Languages
+- Python
+
+### Frameworks & Tools
+- GitHub
+- GitPod
+- Smartdraw<span>.</span>com ( to create a flowchart)
+
 ## Features
 
 ### Welcome Message
