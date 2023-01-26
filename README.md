@@ -93,11 +93,69 @@ Allowing users to play and guess words
 
 ## Features
 
-### Welcome Message
+### Welcome Screen
+- The main screen displays title and menu with the option to choice start the game or read the rules of the game
 
-<details><summary>Welcome message</summary>
+<details><summary>Welcome screen</summary>
 <img src="">
 </details>
+
+### Rules Screen
+- The user can select number 2 and read the rules of the game
+
+<details><summary>Rules screen</summary>
+<img src="">
+</details>
+
+### Theme Screen
+- The user can also select number 1 and after will display the screen with option to choose the theme of words
+
+<details><summary>Theme screen</summary>
+<img src="">
+</details>
+
+### Game Screen
+- After selecting the theme of words, the user can start the game
+- Random word will be display
+- A graphic hangman is displayed to show the user the lives remaining
+- Underneath a '_' is shown for each letter in the word
+
+<details><summary>Game screen</summary>
+<img src="">
+</details>
+
+### User input
+- The user guesses a letter 
+- If the entry is correct, the letter will apper in the word
+
+<details><summary>User input 1</summary>
+<img src="">
+</details>
+
+-  If the entry is wrong, the user will lose one life and will see the image of hangman
+
+<details><summary>User input 2</summary>
+<img src="">
+</details>
+
+- If the entry is invalid, the error messege will appear
+
+<details><summary>User input 3</summary>
+<img src="">
+</details>
+
+### Result Screen
+- If the user guessed the word, the result screen will display and notice about this
+<details><summary>Result screen 1</summary>
+<img src="">
+</details>
+
+- If the user lost all his life, the result screen wiil display guessed word and will offer to play again
+
+<details><summary>result screen 2</summary>
+<img src="">
+</details>
+
 
 ## Validation
 
