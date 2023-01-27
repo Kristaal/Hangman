@@ -157,6 +157,11 @@ Allowing users to play and guess words
 <img src="docs/features/result_2.png">
 </details>
 
+## Testing
+I have manually tested this project by doing the following:
+- Passed the code through a PEP8 linter and confirmed there are no problems
+- Given invalid inputs
+- Tested in my local terminal and the Code Institute Heroku terminal
 
 ## Validation
 
