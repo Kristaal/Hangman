@@ -98,21 +98,21 @@ Allowing users to play and guess words
 - The main screen displays title and menu with the option to choice start the game or read the rules of the game
 
 <details><summary>Welcome screen</summary>
-<img src="">
+<img src="docs/features/welcome_screen.png">
 </details>
 
 ### Rules Screen
 - The user can select number 2 and read the rules of the game
 
 <details><summary>Rules screen</summary>
-<img src="">
+<img src="docs/features/rules_screen.png">
 </details>
 
 ### Theme Screen
 - The user can also select number 1 and after will display the screen with option to choose the theme of words
 
 <details><summary>Theme screen</summary>
-<img src="">
+<img src="docs/features/theme_screen.png">
 </details>
 
 ### Game Screen
@@ -122,7 +122,7 @@ Allowing users to play and guess words
 - Underneath a '_' is shown for each letter in the word
 
 <details><summary>Game screen</summary>
-<img src="">
+<img src="docs/features/game_screen.png">
 </details>
 
 ### User input
@@ -130,31 +130,31 @@ Allowing users to play and guess words
 - If the entry is correct, the letter will apper in the word
 
 <details><summary>User input 1</summary>
-<img src="">
+<img src="docs/features/user_input_1.png">
 </details>
 
 -  If the entry is wrong, the user will lose one life and will see the image of hangman
 
 <details><summary>User input 2</summary>
-<img src="">
+<img src="docs/features/user_input_2.png">
 </details>
 
 - If the entry is invalid, the error messege will appear
 
 <details><summary>User input 3</summary>
-<img src="">
+<img src="docs/features/user_input_3.png">
 </details>
 
 ### Result Screen
 - If the user guessed the word, the result screen will display and notice about this
 <details><summary>Result screen 1</summary>
-<img src="">
+<img src="docs/features/result_1.png">
 </details>
 
 - If the user lost all his life, the result screen wiil display guessed word and will offer to play again
 
-<details><summary>result screen 2</summary>
-<img src="">
+<details><summary>Result screen 2</summary>
+<img src="docs/features/result_2.png">
 </details>
 
 
