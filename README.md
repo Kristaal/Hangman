@@ -26,12 +26,13 @@ Users try to guess a random word, by guessing the letters of the missing word. E
     1. [Languages](#languages)
     2. [Frameworks & Tools](#frameworks-&-tools)
 6. [Features](#features)
-7. [Testing](#validation)
-    1. [PEP8 validation](#pep8-validation)
+7. [Testing](#testing)
+    1. [Validation](#validation)
     2. [Testing user stories](#testing-user-stories)
 8. [Bugs](#Bugs)
 9. [Deployment](#deployment)
 10. [Credits](#credits)
+    1. [Code](#code)
 11. [Acknowledgments](#acknowledgments)
 
 ## How to play
@@ -163,9 +164,7 @@ I have manually tested this project by doing the following:
 - Given invalid inputs
 - Tested in my local terminal and the Code Institute Heroku terminal
 
-## Validation
-
-### PEP8 validation
+### Validation
 PEP8 online was used to check the code for PEP8 requirements.
 All code passes with no errors and warnings to show
 
@@ -180,6 +179,7 @@ All code passes with no errors and warnings to show
 <details><summary>hangman.py</summary>
 <img src="docs/validation/pep8_validation_hangman.png">
 </details>
+<br>
 
 ### Testing user stories
 1. As a user, I want to read the rules of the game
