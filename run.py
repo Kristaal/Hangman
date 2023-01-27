@@ -3,9 +3,9 @@ Project 3 for Code Istitute
 """
 import random
 import os
+from colorama import Fore
 import words
 from hangman import hangman_lives
-from colorama import Fore, Back, Style
 
 
 MOVIES_THEME = words.movies_words
@@ -25,11 +25,6 @@ def title():
     """
     function to display the title
     """
-    print(Fore.RED + 'some red text')
-    print(Back.GREEN + 'and with a green background')
-    print(Style.DIM + 'and in dim text')
-    print(Style.RESET_ALL)
-    print('back to normal now')
     print(Fore.RED + """
         ░▒█░▒█░█▀▀▄░▒█▄░▒█░▒█▀▀█░▒█▀▄▀█░█▀▀▄░▒█▄░▒█
         ░▒█▀▀█▒█▄▄█░▒█▒█▒█░▒█░▄▄░▒█▒█▒█▒█▄▄█░▒█▒█▒█
@@ -67,7 +62,6 @@ def rules():
        Hangman is a word guessing game.\n
        If the letter is in the unknown word it will display.\n
        If the guessed letter is not in the unknown word you will lose a life.\n
-       You will have 6 tries to guess before you are hanged and lose the game!
        You can choose the different theme of words, M for movies theme,
        C for cars theme, A for animals theme.\n
        Good luck!
@@ -85,6 +79,7 @@ def set_theme():
     print('C for cars theme (6 lives), and '.center(80))
     print(' A for animals theme (5 lives)'.center(80))
     theme = False
+    lives = ""
     while not theme:
         theme_level = input(' '.center(40)).upper()
         if theme_level == 'M':
@@ -105,6 +100,7 @@ def random_word(lives):
     """
     function to set the random word depending on user theme
     """
+    get_words = ""
     if lives == 7:
         get_words = random.choice(MOVIES_THEME).upper()
     elif lives == 6:
@@ -132,7 +128,7 @@ def game(word, lives_qv):
         if len(user_guess) == 1 and user_guess.isalpha():
             if user_guess in guessed_letters:
                 clear_terminal()
-                print(' ' * 25 + 'You guessed the letter ' + user_guess)
+                print(' ' * 25 + 'You already guessed ' + user_guess)
             elif user_guess not in word:
                 clear_terminal()
                 print(' ' * 25 + user_guess + ' is not in the word')
@@ -182,7 +178,7 @@ def restart(guessed, word):
         again()
     else:
         clear_terminal()
-        print(' ' * 20 + 'You run out of lives. the word was: ' + word)
+        print(' ' * 20 + 'You run out of lives. The word was: ' + word)
         print('\n')
         again()
 
@@ -192,7 +188,7 @@ def again():
     function to start the game again or back to the main menu
     """
     while True:
-        user_input = input(' ' * 23 + 'Play again? Y/N').upper()
+        user_input = input(Fore.WHITE + ' ' * 23 + 'Play again? Y/N').upper()
         print('\n')
         if user_input == 'Y':
             start()

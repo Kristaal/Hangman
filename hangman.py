@@ -95,6 +95,4 @@ def hangman_lives(lives):
         """
                                     """,
              ]
-
-
-return stages[lives]
+    return stages[lives]
