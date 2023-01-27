@@ -5,9 +5,9 @@ Hangman is a terminal based game, which runs in the Code Institute mock terminal
 
 Users try to guess a random word, by guessing the letters of the missing word. Each uncorrect guess takes one life. The game is over if the user guesses all the missing litters of the word or if he loses all his lives. Instructions are provided in the game to teach the user how to play.
 
-![Start screen]()
+![Start screen](docs/am-i-responsive.png)
 
-[Live webpage]()
+[Live webpage](https://hangman99.herokuapp.com/)
 
 ## Table of Content
 
@@ -53,8 +53,9 @@ Allowing users to play and guess words
 ## User Experience
 
 ### Target Audience
-- User, who wants to remember the classic game "Hangman"
+- User, who wants to play the classic game "Hangman"
 - User, who want to guess the word
+- User, who likes terminal game
 
 ### User Requirements and Expectations
 - Easy to play
