@@ -288,7 +288,7 @@ All code passes with no errors and warnings to show
 
 | Bug | Fix |
 | ----------- | ----------- |
-| On the main menu "PLAY GAME" and "HOW TO PLAY" are displayed not in the middle and have different positions| Add .center(80) to the both|
+| On the main menu "PLAY GAME" and "HOW TO PLAY" are not displayed in the center and have different positions| Add .center(80) to the both|
 The user didn`t lose his lifes | Fix code and add lives_qv -= 1 to the run.py |
 Some phrases of the game have different position | Add * 30 to the print line
 
@@ -323,7 +323,7 @@ You can clone the repository by following these steps:
 
 ### Code
 - Hangman youtube tutorial (how to build a hangman game)
--
+
 ## Acknowledgments
 - Spenser Barriball, my mentor. Thank you for your guidance and feedback.
 
