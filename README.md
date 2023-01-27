@@ -64,16 +64,16 @@ Allowing users to play and guess words
 
 ### User Stories
 1. As a user, I want to read the rules of the game
-2. As a user, I want to start the game
-3. As a user, I want to be able to choose different theme for words to guess
-4. As a user, I want to see my remaining lives
-5. As a user, I want to see which letters I guessed correctly. 
-6. As a user, I want to see which letter 
+2. As a user, I want to be able to choose different theme for words to guess
+3. As a user, I want to start the game
+4. As a user, I want to see which letters I guessed correctly. 
+5. As a user, I want to see which letter 
  I guessed wrong
+6. As user, I want to know what letter I already guessed
 7. As a user, I want to get the result
 8. As a user, I want to play again
 ### Site Owner Stories
-9. As a site owner, I want the user to be able to play
+9. As a site owner, I want the user to get feedback in case of wrong input
 
 ## Technical Design
 
@@ -177,16 +177,107 @@ All code passes with no errors and warnings to show
 </details>
 
 ### Testing user stories
-1. 
+1. As a user, I want to read the rules of the game
 
 | Feature | Action | Expected Result | Actual Result |
 |-------------|------------|---------------------|-------------------|
-| | | |
+| Read rules of the game | On main menu choose and input number "2" | Rules screen is displayed| Works as expected 
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="docs/user_stories/user_story_1.png">
+</details>
+<br>
+2. As a user, I want to be able to choose different theme for words to guess
+
+| Feature | Action | Expected Result | Actual Result |
+|-------------|------------|---------------------|-------------------|
+| Start the game | On main menu choose and input number "1" |  Start game screen is displayed| Works as expected 
+
+<details><summary>Screenshots</summary>
+<img src="docs/user_stories/user_story_2.png">
+</details>
+<br>
+
+3. As a user, I want to start the game
+
+| Feature | Action | Expected Result | Actual Result |
+|-------------|------------|---------------------|-------------------|
+| Start the game | Choose the theme of word and input "C","A" or "M"  |  Game screen is displayed| Works as expected 
+
+<details><summary>Screenshots</summary>
+<img src="docs/user_stories/user_story_3.png">
+</details>
+<br>
+
+4. As a user, I want to see which letters I guessed correctly
+
+| Feature | Action | Expected Result | Actual Result |
+|-------------|------------|---------------------|-------------------|
+| Right input |  A user provides letter that is in the word | Line "guessed letter is in the word" is displayed, appears in place of "__" | Works as expected 
+
+<details><summary>Screenshots</summary>
+<img src="docs/user_stories/user_story_4.png">
+</details>
+<br>
+
+5. As a user, I want to see which letter 
+ I guessed wrong
+
+| Feature | Action | Expected Result | Actual Result |
+|-------------|------------|---------------------|-------------------|
+| Wrong input |  A user provides letter that is not in the word | Line "guessed letter  is not in the word" is displayed, user lose one life and an image og hangman appears adding different parts of the body | Works as expected 
+
+<details><summary>Screenshots</summary>
+<img src="docs/user_stories/user_story_5.png">
+</details>
+<br>
+
+6. As user, I want to know what letter I already guessed
+
+| Feature | Action | Expected Result | Actual Result |
+|-------------|------------|---------------------|-------------------|
+| Repeated input  |  A user provides letter that he already guessed | Line "You already guessed letter" is displayed | Works as expected 
+
+<details><summary>Screenshots</summary>
+<img src="docs/user_stories/user_story_6.png">
+</details>
+<br>
+
+7. As a user, I want to get the result
+
+| Feature | Action | Expected Result | Actual Result |
+|-------------|------------|---------------------|-------------------|
+| Result |  Users guessed the word or lose all his lifes  | Result screen is displayed | Works as expected 
+
+<details><summary>Screenshots Result 1</summary>
+<img src="docs/user_stories/user_story_8.png">
 </details>
 
+<details><summary>Screenshots Result 2</summary>
+<img src="docs/user_stories/user_story_9.png">
+</details>
+<br>
+8. As a user, I want to play again
+
+| Feature | Action | Expected Result | Actual Result |
+|-------------|------------|---------------------|-------------------|
+| Play again |  Users chose and input "Y"  | Game screen is displayed | Works as expected 
+
+<details><summary>Screenshots</summary>
+<img src="docs/user_stories/user_story_10.png">
+</details>
+<br>
+
+### Site Owner Stories
+9. As a site owner, I want the user to get feedback in case of wrong input
+
+| Feature | Action | Expected Result | Actual Result |
+|-------------|------------|---------------------|-------------------|
+| Input validation |	A user provides invalid input|A message explaining the error is displayed and the user is prompted to try again	| Works as expected
+
+<details><summary>Screenshots</summary>
+<img src="docs/user_stories/user_story_7.png">
+</details>
 ## Bugs
 
 | Bug | Fix |
