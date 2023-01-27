@@ -26,9 +26,12 @@ def title():
     function to display the title
     """
     print(Fore.RED + """
-        ░▒█░▒█░█▀▀▄░▒█▄░▒█░▒█▀▀█░▒█▀▄▀█░█▀▀▄░▒█▄░▒█
-        ░▒█▀▀█▒█▄▄█░▒█▒█▒█░▒█░▄▄░▒█▒█▒█▒█▄▄█░▒█▒█▒█
-        ░▒█░▒█▒█░▒█░▒█░░▀█░▒█▄▄▀░▒█░░▒█▒█░▒█░▒█░░▀█
+       ██╗  ██╗ █████╗ ███╗   ██╗ ██████╗ ███╗   ███╗ █████╗ ███╗   ██╗
+       ██║  ██║██╔══██╗████╗  ██║██╔════╝ ████╗ ████║██╔══██╗████╗  ██║
+       ███████║███████║██╔██╗ ██║██║  ███╗██╔████╔██║███████║██╔██╗ ██║
+       ██╔══██║██╔══██║██║╚██╗██║██║   ██║██║╚██╔╝██║██╔══██║██║╚██╗██║
+       ██║  ██║██║  ██║██║ ╚████║╚██████╔╝██║ ╚═╝ ██║██║  ██║██║ ╚████║
+       ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
         """)
 
 
@@ -57,8 +60,7 @@ def rules():
     function to display rules for users
     """
     clear_terminal()
-    print(
-        """
+    print(Fore.WHITE + """
        Hangman is a word guessing game.\n
        If the letter is in the unknown word it will display.\n
        If the guessed letter is not in the unknown word you will lose a life.\n
@@ -66,7 +68,7 @@ def rules():
        C for cars theme, A for animals theme.\n
        Good luck!
         """)
-    input(' ' * 12 + 'Press enter to return to the main menu\n')
+    input(Fore.GREEN + ' ' * 12 + 'Press enter to return to the main menu\n')
     welcome()
 
 
@@ -75,9 +77,9 @@ def set_theme():
     function to set the theme of the word
     """
     print('\n')
-    print('Please select M for movies theme (7 lives), '.center(80))
-    print('C for cars theme (6 lives), and '.center(80))
-    print(' A for animals theme (5 lives)'.center(80))
+    print(Fore.WHITE + 'Please select M for movies theme (7 lives)'.center(80))
+    print(Fore.WHITE + 'C for cars theme (6 lives), '.center(80))
+    print(Fore.WHITE + 'A for animals theme (5 lives)'.center(80))
     theme = False
     lives = ""
     while not theme:
@@ -92,7 +94,7 @@ def set_theme():
             theme = True
             lives = 5
         else:
-            print('Please select M, C or A'.center(80))
+            print(Fore.GREEN + 'Please select M, C or A'.center(80))
     return lives
 
 
@@ -119,11 +121,11 @@ def game(word, lives_qv):
     guessed = False
     guessed_letters = []
     guessed_word = []
-    print(hangman_lives(lives_qv))
-    print(" ".join(blanks).center(76))
+    print(Fore.WHITE + hangman_lives(lives_qv))
+    print(Fore.GREEN + " ".join(blanks).center(76))
     print('\n')
     while not guessed and lives_qv > 0:
-        print(f"Lives: {lives_qv}".center(76))
+        print(Fore.WHITE + f"Lives: {lives_qv}".center(76))
         user_guess = input(' ' * 25 + 'Please guess a letter: ').upper()
         if len(user_guess) == 1 and user_guess.isalpha():
             if user_guess in guessed_letters:
@@ -136,7 +138,7 @@ def game(word, lives_qv):
                 guessed_letters.append(user_guess)
             else:
                 clear_terminal()
-                print(' ' * 25 + user_guess + ' is in the word')
+                print(' ' * 30 + user_guess + ' is in the word')
                 guessed_letters.append(user_guess)
                 word_li = list(blanks)
                 indices = [i for (i, letter) in enumerate(word)
@@ -149,10 +151,10 @@ def game(word, lives_qv):
         elif len(user_guess) == len(word) and user_guess.isalpha():
             if user_guess in guessed_word:
                 clear_terminal()
-                print(' ' * 25 + 'You guessed the word ' + user_guess)
+                print(' ' * 30 + 'You guessed the word ' + user_guess)
             elif user_guess != word:
                 clear_terminal()
-                print(' ' * 25 + user_guess + 'is not in the word')
+                print(' ' * 30 + user_guess + 'is not in the word')
                 lives_qv -= 1
                 guessed_word.append(user_guess)
             else:
@@ -160,9 +162,9 @@ def game(word, lives_qv):
                 blanks = word
         else:
             clear_terminal()
-            print('Not valid'.center(80))
-        print(hangman_lives(lives_qv))
-        print(" ".join(blanks).center(76))
+            print(Fore.RED + 'Not valid'.center(80))
+        print(Fore.WHITE + hangman_lives(lives_qv))
+        print(Fore.GREEN + " ".join(blanks).center(76))
         print('\n')
     restart(guessed, word)
 
@@ -173,11 +175,20 @@ def restart(guessed, word):
     """
     if guessed:
         clear_terminal()
-        print('You guessed the word'.center(80))
+        print()
+        print(Fore.GREEN + 'You guessed the word'.center(80))
         print('\n')
         again()
     else:
         clear_terminal()
+        print(Fore.WHITE + """
+         ██████╗  █████╗ ███╗   ███╗███████╗  ██████╗ ██╗   ██╗███████╗██████╗
+         ██╔════╝ ██╔══██╗████╗ ████║██╔════╝ ██╔═══██╗██║  ██║██╔════╝██╔══██╗
+         ██║  ███╗███████║██╔████╔██║█████╗   ██║   ██║██║  ██║█████╗  ██████╔╝
+         ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝   ██║   ██║╚██╗ ██╔╝██╔══╝ ██╔══██╗
+         ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗ ╚██████╔╝ ╚████╔╝ ██████╗██║  ██║
+         ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝   ╚═════╝   ╚═══╝  ╚═════╝╚═╝  ╚═╝
+        """)
         print(' ' * 20 + 'You run out of lives. The word was: ' + word)
         print('\n')
         again()
@@ -188,7 +199,7 @@ def again():
     function to start the game again or back to the main menu
     """
     while True:
-        user_input = input(Fore.WHITE + ' ' * 23 + 'Play again? Y/N').upper()
+        user_input = input(Fore.WHITE + ' ' * 30 + 'Play again? Y/N').upper()
         print('\n')
         if user_input == 'Y':
             start()
