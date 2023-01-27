@@ -5,6 +5,8 @@ import random
 import os
 import words
 from hangman import hangman_lives
+from colorama import Fore, Back, Style
+
 
 MOVIES_THEME = words.movies_words
 CARS_THEME = words.cars_words
@@ -23,13 +25,16 @@ def title():
     """
     function to display the title
     """
-    print(
-        """
+    print(Fore.RED + 'some red text')
+    print(Back.GREEN + 'and with a green background')
+    print(Style.DIM + 'and in dim text')
+    print(Style.RESET_ALL)
+    print('back to normal now')
+    print(Fore.RED + """
         ░▒█░▒█░█▀▀▄░▒█▄░▒█░▒█▀▀█░▒█▀▄▀█░█▀▀▄░▒█▄░▒█
         ░▒█▀▀█▒█▄▄█░▒█▒█▒█░▒█░▄▄░▒█▒█▒█▒█▄▄█░▒█▒█▒█
         ░▒█░▒█▒█░▒█░▒█░░▀█░▒█▄▄▀░▒█░░▒█▒█░▒█░▒█░░▀█
-        """
-    )
+        """)
 
 
 def welcome():
@@ -38,8 +43,8 @@ def welcome():
     """
     clear_terminal()
     print('\n')
-    print(' 1 PLAY GAME '.center(80))
-    print(' 2 HOW TO PLAY '.center(80))
+    print(Fore.WHITE + ' 1 PLAY GAME '.center(80))
+    print(Fore.WHITE + ' 2 HOW TO PLAY '.center(80))
     print('\n' * 4)
     while True:
         user_choice = input(' ' * 28 + 'Select 1 or 2: ')
